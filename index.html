@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cobra Revolucionária</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hud">
+        <div class="hud__item">
+          <span class="label">Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="hud__item">
+          <span class="label">Recorde</span>
+          <strong id="high-score">0</strong>
+        </div>
+        <div class="hud__item">
+          <span class="label">Velocidade</span>
+          <strong id="speed">1x</strong>
+        </div>
+      </section>
+
+      <canvas id="game" width="640" height="640" aria-label="Jogo da cobrinha"></canvas>
+
+      <section class="controls">
+        <p>Setas/WASD para mover · Espaço para pausar</p>
+      </section>
+    </main>
+
+    <section id="overlay" class="overlay is-visible" role="dialog" aria-modal="true">
+      <div class="card" id="overlay-card">
+        <h1 id="overlay-title">🐍 Cobra Revolucionária</h1>
+        <p id="overlay-text">Um jogo diferenciado: efeitos neon, ritmo dinâmico e modo turbo. Pronto para falar <strong>UAU</strong>?</p>
+        <div class="actions">
+          <button id="start-btn" class="btn btn--primary">Começar</button>
+          <button id="reset-btn" class="btn btn--ghost">Resetar Jogo</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
