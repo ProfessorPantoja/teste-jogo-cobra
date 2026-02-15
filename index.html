@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cobra Quantum: Edição Revolucionária</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hud">
+        <section class="hud-card">
+          <h2>Score</h2>
+          <p id="score">0</p>
+        </section>
+        <section class="hud-card">
+          <h2>Recorde</h2>
+          <p id="high-score">0</p>
+        </section>
+        <section class="hud-card">
+          <h2>Nível</h2>
+          <p id="level">1</p>
+        </section>
+      </header>
+
+      <section class="game-shell">
+        <canvas id="game" width="576" height="576" aria-label="Tabuleiro do jogo cobrinha"></canvas>
+
+        <div id="start-screen" class="overlay visible" role="dialog" aria-modal="true">
+          <h1>Cobra Quantum 🐍⚡</h1>
+          <p>
+            Coma <strong>núcleos de energia</strong>, ative o <strong>Modo Overdrive</strong> e sobreviva ao caos.
+            Controle com <kbd>WASD</kbd> ou <kbd>setas</kbd>.
+          </p>
+          <button id="start-btn">Iniciar Missão</button>
+        </div>
+
+        <div id="pause-screen" class="overlay" role="dialog" aria-modal="true">
+          <h2>⏸ Pausado</h2>
+          <p>Pressione <kbd>Espaço</kbd> para continuar.</p>
+        </div>
+
+        <div id="game-over-screen" class="overlay" role="dialog" aria-modal="true">
+          <h2>💥 Fim de Jogo</h2>
+          <p id="final-score">Seu score: 0</p>
+          <button id="restart-btn">Jogar de Novo</button>
+        </div>
+      </section>
+
+      <footer class="controls">
+        <button id="pause-btn">Pausar</button>
+        <button id="reset-btn">Resetar</button>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
